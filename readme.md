@@ -1,7 +1,7 @@
 # INTERACTIVE SERVERLESS BOILERPLATE
 
 ### DEV Scripts:
-- `npm run emulate` run serverless Api locally (with hot reload - localhost:3000)
+- `npm run emulate` run serverless locally (with hot reload - localhost:3000)
 - `npm run offline` run `serverless offline` (official serverless offline emulator)
 
 ### Bundle scripts:
