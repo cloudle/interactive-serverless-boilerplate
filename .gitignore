@@ -1,0 +1,20 @@
+# OSX
+#
+.DS_Store
+
+#serverless-api
+.serverless
+serverless/bundle.js
+serverless/serverless.yml
+
+build/
+.idea
+.gradle
+local.properties
+*.iml
+
+# node.js
+#
+node_modules/
+npm-debug.log
+yarn-error.log

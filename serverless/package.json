@@ -1,0 +1,14 @@
+{
+	"name": "just-another-serverless",
+	"version": "1.0.0",
+	"description": "",
+	"main": "router.js",
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"aws-sdk": "^2.49.0"
+	},
+	"devDependencies": {
+		"serverless-offline": "^3.14.0"
+	}
+}

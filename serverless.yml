@@ -1,0 +1,48 @@
+service: interactive-serverless
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  memorySize: 128
+  stage: {{stage}}
+
+package:
+  individually: true
+  exclude:
+    - "**/*"  # quotes(") are needed
+
+functions:
+  api:
+    handler: bundle.handler
+    events:
+      - http:
+          path: /
+          method: get
+          cors:
+            origins:
+              - '*'
+            headers:
+              - Content-Type
+              - token
+              - Authorization
+          integration: lambda-proxy
+      - http:
+          path: /
+          method: post
+          cors:
+            origins:
+              - '*'
+            headers:
+              - Content-Type
+              - token
+              - Authorization
+          integration: lambda-proxy
+    package:
+      include:
+        - node_modules/**
+        - bundle.js
+        - auth.cert
+        - serverless.config.json
+
+plugins:
+  - serverless-offline
